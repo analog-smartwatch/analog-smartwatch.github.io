@@ -1,2 +1,2 @@
-# analog-smartwatch-website
-Website for the Analog Smartwatch project
+# Analog Smartwatch Website
+Website for the Analog Smartwatch project made with Eleventy.

@@ -1,0 +1,56 @@
+<header class="block sm:hidden" x-data="{show: false}" @click.away="show = false">
+    <div class="mt-8">
+        <div class="flex justify-center mb-8 mp-4">
+                <a class="no-underline font-extrabold" href="/">Analog smartwatch</a>
+        </div>
+        <div class="flex pl-6 justify-center">
+            <div @click="show = ! show" class="justify-content-center">
+                <div aria-label="menu" class="no-underline">
+                    {% badge "Menu", "menu" %}
+                </div>
+            </div>
+        </div>
+        <nav x-show="show" class="main-container text-center pt-10 flex-col sm:flex-row space-x-0 sm:space-x-6">
+            {% for item in collections.page %}
+                <div class="pb-4 md:pb-0">
+                    {% if item.url == page.url %}
+                        <a aria-label="{{item.data.title}}" class="no-underline hover:hover-link text-black font-semibold" href="{{ item.url }}">
+                            {{ item.data.title }}
+                        </a>
+                    {% endif %}
+                    {% if item.url != page.url %}
+                        <a aria-label="{{item.data.title}}" class="text-gray-600 no-underline hover:hover-link" href="{{ item.url }}">
+                            {{ item.data.title }}
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </nav>
+    </div>
+</header>
+
+<header class="hidden sm:block" class="text-lg text-black bg-white py-6 sm:py-8 md:py-10">
+    <nav class="flex flex-col sm:flex-row main-container sm:py-10 sm:py-14 space-x-0 sm:space-x-6">
+        <div class="flex-1">
+            <a class="no-underline font-extrabold" href="/">Analog smartwatch</a>
+        </div>
+        <div class="flex-1">
+            <div class="flex flex-row items-center justify-end h-full">
+                {% for item in collections.page %}
+                    <div class="pl-6">
+                        {% if item.url == page.url %}
+                            <a aria-label="{{item.data.title}}" class="no-underline hover:hover-link text-black font-semibold" href="{{ item.url }}">
+                                {{ item.data.title }}
+                            </a>
+                        {% endif %}
+                        {% if item.url != page.url %}
+                            <a aria-label="{{item.data.title}}" class="text-gray-600 no-underline hover:hover-link" href="{{ item.url }}">
+                                {{ item.data.title }}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </nav>
+</header>

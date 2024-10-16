@@ -1,0 +1,6 @@
+{
+    "layout": "blogLayout",
+    "tags": "blog",
+    "permalink": "blog/{{ slug }}/"
+  }
+  
