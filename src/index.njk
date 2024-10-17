@@ -7,7 +7,11 @@ order: 1
 
 {% include "partials/index/_intro.njk" %}
 
-{% include "partials/index/_features.njk" %}
+<div class="divide-solid divide-y main-container">
+  {% include "partials/index/_features.njk" %}
+</div>
+
+{% include "partials/index/_watch-components.njk" %}
 
 {% include "partials/index/_app-preview.njk" %}
 
