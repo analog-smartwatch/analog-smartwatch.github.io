@@ -7,4 +7,4 @@ slug: "start-of-the-analog-smartwatch-project"
 draft: false
 ---
 
-This project aims to create an analog smartwatch, or "hybrid" smartwatch. This blog section has been created to share milestones.
+This project aims to create an open-source analog smartwatch, or "hybrid" smartwatch.
